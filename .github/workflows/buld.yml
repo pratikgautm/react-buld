@@ -22,7 +22,7 @@ jobs:
       - name: Build Android Release
 #         run: |
 #           cd android && ./gradlew assembleRelease
-        run: echo hello > path/to/artifact/world.txt
+        run: mkdir -p path/to/artifact && echo "hello" > path/to/artifact/world.txt
       - name: Upload Artifact
 #         uses: actions/upload-artifact@v1
 #         with:
