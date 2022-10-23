@@ -36,3 +36,11 @@ jobs:
           connection_string: ${{ secrets.YourAzureBlobConnectionString }}
           container_name: apkstorage
           source_folder: android/app/build/outputs/apk/release/
+       
+      - uses: act10ns/slack@v1
+        name: Slack Notification
+        with: 
+          status: ${{ job.status }}
+          channel: '#general'
+          message: Uploaded app-${GITHUB_REF##*/} file Successfully
+
