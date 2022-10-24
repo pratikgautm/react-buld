@@ -45,4 +45,3 @@ jobs:
           status: ${{ job.status }}
           channel: '#general'
           message: Uploaded app-${GITHUB_REF##*/} file Successfully
-
